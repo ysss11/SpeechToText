@@ -1,3 +1,4 @@
+# Google社の Cloud Speech-to-text (音声認識API)を利用して 日本語音声データからテキストデータへ変換するプログラム
 # 前提
  - OS：Windows
  - Pythonがインストールされている事。
