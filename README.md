@@ -1,9 +1,9 @@
 # 前提
  - OS：Windows
  - Pythonがインストールされている事。
- - 下記にてGCPプロジェクトの作成と認証情報JSONのダウンロード
+ - 下記にてGCPプロジェクトの作成と認証情報JSONのダウンロード  
     https://zenn.dev/daisukesasaki/articles/fd0cafe486c934
- - 下記にてCloud SDKのダウンロード
+ - 下記にてCloud SDKのダウンロード  
     https://cloud.google.com/sdk/docs/quickstart?hl=ja
 
 # 仮想環境の作成
@@ -69,6 +69,7 @@ optional arguments:
 ```
 
 ## 出力結果
+```
 Waiting for operation to complete...
 Transcript: ご住所の変更でございますねご連絡ありがとうございます恐れ入りますがご契約内容を確認いたしますのでお電話を頂いてる方は契約者ご本人様でいらっしゃいますかはいそうです本人ですそれではお電話をいただいておりますお客様のお
 名前をお願い致します山田太郎です
@@ -85,6 +86,7 @@ Transcript: 山田太郎様でいらっしゃいますねでは契約者ご本�
 1 . 山田 = 3
 2 . 太郎 = 2
 3 . 生年月日 = 2
+```
 
 # 単体テスト実施方法と結果
 ```
@@ -97,11 +99,11 @@ OK
 ```
 
 # 環境作成準備参考資料
-https://cloud.google.com/python/docs/setup?hl=ja#windows
-https://cloud.google.com/speech-to-text/docs/libraries?hl=ja#client-libraries-install-python
-https://zenn.dev/daisukesasaki/articles/fd0cafe486c934
-https://cloud.google.com/sdk/docs/quickstart?hl=ja
-https://cloud.google.com/speech-to-text/docs/libraries?hl=ja#windows
+https://cloud.google.com/python/docs/setup?hl=ja#windows  
+https://cloud.google.com/speech-to-text/docs/libraries?hl=ja#client-libraries-install-python  
+https://zenn.dev/daisukesasaki/articles/fd0cafe486c934  
+https://cloud.google.com/sdk/docs/quickstart?hl=ja  
+https://cloud.google.com/speech-to-text/docs/libraries?hl=ja#windows  
 
 # 音声ファイル
-https://github.com/IBM/speech-to-text-code-pattern/tree/master/public/audio
+https://github.com/IBM/speech-to-text-code-pattern/tree/master/public/audio  
