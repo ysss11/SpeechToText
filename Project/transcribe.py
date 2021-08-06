@@ -46,14 +46,11 @@ def transcribe_file(speech_file):
     filepath = 'output/SpeechToText_{}.txt'.format(today)
     textfile = codecs.open(filepath, 'a', 'utf-8')
 
-    #speechs = []
     # Each result is for a consecutive portion of the audio. Iterate through
     # them to get the transcripts for the entire audio file.
     for result in response.results:
         # The first alternative is the most likely one for this portion.
         print(u"Transcript: {}".format(result.alternatives[0].transcript))
-        #print("Confidence: {}".format(result.alternatives[0].confidence))
-        #speechs.append(result.alternatives[0].transcript)
         textfile.write(u'{}\n'.format(result.alternatives[0].transcript))
     # [END speech_python_migration_async_response]
     textfile.close()
