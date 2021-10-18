@@ -9,7 +9,7 @@
 #     buckets = list(storage_client.list_buckets())
 #     print(buckets)
 
-def run_quickstart():
+def run_quickstart() -> None:
     # Imports the Google Cloud client library
     from google.cloud import speech
 

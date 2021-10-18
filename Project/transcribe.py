@@ -4,6 +4,7 @@ import datetime
 import io
 import re
 
+from typing import List
 from janome.tokenizer import Tokenizer
 
 ## テキストに変換し出力したファイルから検索対象で検索
@@ -12,7 +13,7 @@ from janome.tokenizer import Tokenizer
 #
 # @return str テキストに変換し出力したファイルパス
 #
-def transcribe_file(speech_file):
+def transcribe_file(speech_file: str) -> str:
     """Transcribe the given audio file asynchronously."""
     from google.cloud import speech
 
@@ -59,7 +60,7 @@ def transcribe_file(speech_file):
 # [END speech_transcribe_async]
 
 
-def transcribe_gcs(gcs_uri):
+def transcribe_gcs(gcs_uri: str) -> None:
     """Asynchronously transcribes the audio file specified by the gcs_uri."""
     from google.cloud import speech
 
@@ -90,7 +91,7 @@ def transcribe_gcs(gcs_uri):
 # @param filepath str テキストに変換し出力したファイルパス
 # @param searchs list 検索対象
 #
-def search_word(filepath, searchs):
+def search_word(filepath: str, searchs: List[str]) -> None:
     """ テキストに変換し出力したファイルから検索対象で検索 """
     tokenizer = Tokenizer()
     text = ''
