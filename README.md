@@ -2,64 +2,64 @@
 # 前提
  - OS：Windows
  - Pythonがインストールされている事。
- - 下記にてGCPプロジェクトの作成と認証情報JSONのダウンロード  
-    https://zenn.dev/daisukesasaki/articles/fd0cafe486c934
- - 下記にてCloud SDKのダウンロード  
-    https://cloud.google.com/sdk/docs/quickstart?hl=ja
+ - GCPプロジェクトの作成と認証情報JSONのダウンロード  
+ - Cloud SDKのダウンロード  
 
 # 仮想環境の作成
-コマンドプロント
-```
-py -m venv myenv
+
+```cmd
+$ py -m venv myenv
 ```
 
 # 起動
-コマンドプロント
-```
-.\myenv\Scripts\activate
+
+```cmd
+$ .\myenv\Scripts\activate
 ```
 
 # Pythonバージョン
-コマンドプロント
-```
-(myenv) D:\SpeechToText\Project>python --version
+
+```cmd
+$ (myenv) D:\SpeechToText\Project>python --version
 Python 3.7.5
 ```
 
 # requirementsファイルによってパッケージをインストールする
-コマンドプロント
-```
-pip install -r requirements.txt
+
+```cmd
+$ pip install -r requirements.txt
 ```
 
 # Credentialsを環境変数に設定する
 ## jsonファイルの場所を取得
-コマンドプロント
-```
-(myenv) D:\SpeechToText\Project>for %a in (%CD%\\*.json) do (echo %a) | clip
+
+```cmd
+$ (myenv) D:\SpeechToText\Project>for %a in (%CD%\\*.json) do (echo %a) | clip
 ```
 
 ## jsonファイルまでのパスを指定してセットする
-コマンドプロント
-```
-(myenv) D:\SpeechToText\Project>set GOOGLE_APPLICATION_CREDENTIALS={DLしたjsonファイルまでのパス}
+
+```cmd
+$ (myenv) D:\SpeechToText\Project>set GOOGLE_APPLICATION_CREDENTIALS={DLしたjsonファイルまでのパス}
 ```
 ## 環境変数の設定確認
-コマンドプロント
-```
-(myenv) D:\SpeechToText\Project>set
+
+```cmd
+$ (myenv) D:\SpeechToText\Project>set
 ```
 
 # プログラムの実行方法と出力結果
 ## 実行方法
-```
-python transcribe.py --path <ローカルにあるwav拡張子の音声ファイル> --search <検索対象単語1> <検索対象単語2> <検索対象単語3>
+
+```cmd
+$ python transcribe.py --path <ローカルにあるwav拡張子の音声ファイル> --search <検索対象単語1> <検索対象単語2> <検索対象単語3>
 例：(myenv) D:\SpeechToText\Project>python transcribe.py --path resources/public_audio_ja-JP_Narrowband-sample.wav --search 山田 太郎 生年月日
 ```
 
 ## 引数について
-```
-(myenv) D:\SpeechToText\Project>python transcribe.py -h
+
+```cmd
+$ (myenv) D:\SpeechToText\Project>python transcribe.py -h
 usage: transcribe.py [-h] [--path PATH] [--search [SEARCH [SEARCH ...]]]
 
 optional arguments:
@@ -70,7 +70,8 @@ optional arguments:
 ```
 
 ## 出力結果
-```
+
+```cmd
 Waiting for operation to complete...
 Transcript: ご住所の変更でございますねご連絡ありがとうございます恐れ入りますがご契約内容を確認いたしますのでお電話を頂いてる方は契約者ご本人様でいらっしゃいますかはいそうです本人ですそれではお電話をいただいておりますお客様のお
 名前をお願い致します山田太郎です
@@ -90,8 +91,9 @@ Transcript: 山田太郎様でいらっしゃいますねでは契約者ご本�
 ```
 
 # 単体テスト実施方法と結果
-```
-(myenv) D:\SpeechToText\Project>python -m unittest tests/test_transcribe.py
+
+```cmd
+$ (myenv) D:\SpeechToText\Project>python -m unittest tests/test_transcribe.py
 ..
 ----------------------------------------------------------------------
 Ran 2 tests in 29.132s
