@@ -9,6 +9,14 @@
 このプログラムで利用する音声データは1分未満ではwav、1分以上であればGCSを利用する事をおススメする。  
 ※GCSから利用する場合は拡張子がflacとなる。
 
+# GCPプロジェクトの作成と認証情報JSONのダウンロード  
+
+https://zenn.dev/daisukesasaki/articles/fd0cafe486c934
+
+# Cloud SDKのダウンロード  
+
+https://cloud.google.com/sdk/docs/quickstart?hl=ja
+
 # 環境作成準備参考資料
 https://cloud.google.com/python/docs/setup?hl=ja#windows  
 https://cloud.google.com/speech-to-text/docs/libraries?hl=ja#client-libraries-install-python  
