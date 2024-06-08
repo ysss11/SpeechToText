@@ -99,12 +99,5 @@ Ran 2 tests in 29.132s
 OK
 ```
 
-# 環境作成準備参考資料
-https://cloud.google.com/python/docs/setup?hl=ja#windows  
-https://cloud.google.com/speech-to-text/docs/libraries?hl=ja#client-libraries-install-python  
-https://zenn.dev/daisukesasaki/articles/fd0cafe486c934  
-https://cloud.google.com/sdk/docs/quickstart?hl=ja  
-https://cloud.google.com/speech-to-text/docs/libraries?hl=ja#windows  
-
 # 音声ファイル
 https://github.com/IBM/speech-to-text-code-pattern/tree/master/public/audio  
